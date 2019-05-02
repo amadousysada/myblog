@@ -1,0 +1,36 @@
+
+a.px-2.fa-lg.fb-ic {
+    color: #0082ca!important;
+}
+
+a.px-2.fa-lg.li-ic {
+    color: #0082ca!important;
+}
+
+a.px-2.fa-lg.tw-ic {
+    color: #0082ca!important;
+}
+
+img.card-img-top.rounded-circle {
+
+
+}
+
+
+@media (max-width:600px){
+    div.view.view-cascade{
+    width:100px;
+    margin-left:25%;
+background-color:blue;
+
+}
+}
+
+@media (min-width:601px){
+    div.view.view-cascade{
+    width:100px;
+    margin-left:42%;
+background-color:blue;
+
+}
+}

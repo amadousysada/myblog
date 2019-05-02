@@ -1,0 +1,42 @@
+[
+
+  {
+    "model": "auth.User",
+    "pk": "1",
+    "fields": {
+      "password":"admin",
+      "is_superuser":"True",
+      "username":"admin",
+      "first_name":"Amadou",
+      "last_name":"SY",
+      "email":"amsada93@gmail.com"
+
+    }
+  },
+
+  {
+    "model": "auth.User",
+    "pk": "2",
+    "fields": {
+      "password":"123456789",
+      "is_superuser":"False",
+      "username":"amsada",
+      "first_name":"Alan",
+      "last_name":"GUTER",
+      "email":"a.guter@chiam.com"
+
+    }
+  },
+
+  {
+    "model": "blog.Post",
+    "pk": "1",
+    "fields": {
+      "topic":"pourquoi Django",
+      "user":"1",
+      "pub_date":"2018-12-13 02:17:00",
+      "content":"Django est une framework complete"
+    }
+  }
+
+]

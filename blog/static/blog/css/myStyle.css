@@ -1,0 +1,32 @@
+body a.navbar-brand img{
+    margin:10px;
+    animation:spin 8s infinite;
+}
+body nav {
+    margin-top:-35px;
+    heigth:10px;
+}
+body{
+margin:15px;
+}
+header form.visible {
+    display: none;
+}
+#navbarSupportedContent ul li:last-child a.visible{
+    display: none;
+}
+
+
+@keyframes spin {
+    50% { transform:rotate(-50deg)}
+    100% { transform:rotate(18deg)}
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+.footer {
+  margin-top:30px;
+}
+.footer .ref{
+bottom:0;
+}
