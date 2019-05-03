@@ -1,4 +1,4 @@
-#!/media/sy/LinuxMint/MYBLOG/venv/bin/python
+#!/home/futur-dev/Bureau/myblog/venv/bin/python
 
 import sys
 import getopt
