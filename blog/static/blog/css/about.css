@@ -11,26 +11,64 @@ a.px-2.fa-lg.tw-ic {
     color: #0082ca!important;
 }
 
-img.card-img-top.rounded-circle {
 
-
-}
-
-
-@media (max-width:600px){
-    div.view.view-cascade{
+div.view.view-cascade{
     width:100px;
-    margin-left:25%;
-background-color:blue;
-
-}
+    margin: auto;
 }
 
-@media (min-width:601px){
+
+/*
+
+
+/* .col-xs-$ */
+/*@media (max-width:600px){
     div.view.view-cascade{
-    width:100px;
-    margin-left:42%;
-background-color:blue;
+	    width:100px;
+	    margin:auto;
+	    background-color:blue;
+	}
+	div.card-body.card-body-cascade.text-center{
+		background-color:blue;
+	}
+}*/
+/* .col-sm */
+/*@media (min-width:600px){
+    div.view.view-cascade:before{
+    width:100px; 
+    margin-left:45%;
+    background-color:yellow;
+    content: "sm"
+	}
+}*/
 
+/* .col-md */
+/*@media (min-width:768px)){
+    div.view.view-cascade{
+    width:100px; 
+    margin-left:45%;
+    background-color:yellow;
+	}
 }
+*/
+/* .col-lg */
+/*@media (min-width:992px)){
+    div.view.view-cascade{
+    width:100px; 
+    margin-left:45%;
+    background-color:yellow;
+    content: "lg"
+	}
+}*/
+
+/* .col-xl */
+/*@media (min-width:1200px)){
+    div.view.view-cascade:before{
+    width:100px; 
+    margin-left:45%;
+    background-color:yellow;
+	}
 }
+
+*/
+	
