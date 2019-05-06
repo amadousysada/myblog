@@ -7,8 +7,8 @@ a.px-2.fa-lg.li-ic {
     color: #0082ca!important;
 }
 
-a.px-2.fa-lg.tw-ic {
-    color: #0082ca!important;
+a.px-2.fa-lg.gh-ic {
+    color: black!important;
 }
 
 
@@ -17,7 +17,9 @@ div.view.view-cascade{
     margin: auto;
 }
 
-
+.bg-customize{
+	background-color: #a7b6bf!important	
+}
 /*
 
 

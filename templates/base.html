@@ -88,13 +88,16 @@
 <body>
     {% block content %}{% endblock %}
 </body>
-<footer class="footer container-fluid">
+<footer class="footer container-fluid bg-customize">
 
         <div class="row">
             {% include "blog/about.html" %}
         </div>
         <div class="row">
-            <h6 >© 2018</h6>
+            <div class="col text-center">
+                <h6 >© 2018</h6>
+            </div>
+            
         </div>
     </div>
 </footer>
