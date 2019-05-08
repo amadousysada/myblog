@@ -16,7 +16,7 @@ def home_view(request):
     date = computeTimeStamp(countdownNow.seconds)
     return render(
         request,
-        'blog/home.html',
+        'blog/index.html',
         {"date":date,"countdown":countdownNow}
     )
 
