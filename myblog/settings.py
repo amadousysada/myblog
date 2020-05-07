@@ -26,9 +26,12 @@ SECRET_KEY = '*g=cd&_vkcq*&a_*3git5qi-f(w^sr+egwat4if4ux3&z3^t5('
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '0.0.0.0',
+    '127.0.0.1'
     '172e3b15.ngrok.io',
     'localhost',
     '192.168.1.5',
+    'myblog-amsada.herokuapp.com',
     'amadousy.pythonanywhere.com',
 ]
 
