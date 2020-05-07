@@ -15,7 +15,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{% static 'blog/images/logo2.png' %}"  rel="shortcut icon" type="image/png" />
+    <link href="{% static 'blog/images/logo-E.png' %}"  rel="shortcut icon" type="image/png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <script src="{% static 'blog/js/jquery-3.2.1.min.js'%}"></script>
@@ -32,21 +32,23 @@
     <title>{% block title%}{{"amsada"|title}}{% endblock %}</title>
 </head>
 
-<header>
 
+<body class="container">
 
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <a class="navbar-brand  d-none d-md-block d-xl-block" href="#">
-            <img src="{% static 'blog/images/logo2.png' %}" class="rounded-circle img-fluid" width="25%" height="2%">
+            <img src="{% static 'blog/images/logo-D1.png' %}" width="100%" height="100%">
         </a>
-
-        <button class="navbar-toggler mt-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand  d-inline-block d-sm-block d-md-none" href="#">
+            <img src="{% static 'blog/images/logo-E1.png' %}" width="30%" height="30%">
+        </a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse my-lg-0" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -55,17 +57,17 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Categories
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                    <div  class="dropdown-menu bg-dark " role="menu">
+                        <ul class="list-inline" >
+                            <li class="list-inline-item"><a  href="#">Programmation</a></li>
+                            <li class="list-inline-item"><a  href="#">Data Science</a></li>
+                            <li class="list-inline-item"><a  href="#">Design</a></li>
+                            <li class="list-inline-item"><a  href="#">Machine Learning</a></li>
+                        </ul>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+
                 </li>
                 <li>
                     <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
@@ -73,22 +75,21 @@
                         <div class="input-group mr-2">
                             <input class="form-control" type="search"  placeholder="Search" aria-label="Search" id="inputSearch">
                             <div class="input-group-append">
-                                <a href="#" class="visible ;"><span style="color:red;background-color: transparancy;border: 0; border-radius:0;position:absolute;margin-left:-25px;">&times;</span></a>
+                                <a href="#" class="visible nav-link"><span style="color:red;background-color: transparancy;border: 0; border-radius:0;position:absolute;margin-left:-25px;">&times;</span></a>
                             </div>
                         </div>
-
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </li>
             </ul>
-
-
         </div>
     </nav>
+    <div class="row">
+        <div class="col">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 
-</header>
-<body>
-    {% block content %}{% endblock %}
 </body>
 <footer class="footer container-fluid bg-customize">
 

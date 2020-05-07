@@ -3,132 +3,20 @@
 {% block content %}
 
 <main role="main">
-  <div class="alert alert-primary sticky-top" role="alert">
-  A simple primary alert—check it out!
-</div>
+  <!--<div class="alert alert-primary sticky-top" role="alert">
+  A simple primary alert—check it out! -->
   <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start  sticky-top mb-5">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading1</h5>
-        <small>small1</small>
+    {% for post in posts %}
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start mt-5">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{post.topic}}</h5>
+          <small>small1</small>
 
-      </div>
-      <p class="mb-1">Paragraph1</p>
-      <small>paragraph footer 1</small>
-      {% include "blog/countdown.html" with date=date countdown=countdown %}
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start sticky-top">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled sticky-top">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active sticky-top">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Heading</h5>
-        <small>small</small>
-      </div>
-      <p class="mb-1">Paragraph</p>
-      <small>paragraph footer fin</small>
-    </a>
+        </div>
+        <p class="mb-1">Paragraph1</p>
+        <small>{{post.content|safe}}</small>
+      </a>
+    {% endfor %}
   </div>
 </main>
 

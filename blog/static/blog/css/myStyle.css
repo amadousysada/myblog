@@ -1,15 +1,17 @@
-body a.navbar-brand img{
+body  imgt{
     margin:10px;
     animation:spin 8s infinite;
 }
+
 body nav {
     margin-top:-35px;
-    heigth:10px;
+    background-color:#0cb;
+    /*height: 50%;*/
 }
 body{
 margin:15px;
 }
-header form.visible {
+nav form.visible {
     display: none;
 }
 #navbarSupportedContent ul li:last-child a.visible{
@@ -30,3 +32,4 @@ header form.visible {
 .footer .ref{
 bottom:0;
 }
+

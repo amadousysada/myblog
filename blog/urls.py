@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 
-from blog.views import home_view
-from blog.views import about_view
+from blog.views import about_view, home_view, post_view
 
 urlpatterns = [
 
     url(r'^about/$', about_view, name='about'),
     url(r'^$', home_view, name='home'),
+    url(r'^post/$', post_view, name='post')
 ]
