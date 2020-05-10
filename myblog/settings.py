@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     '192.168.1.5',
     'myblog-amsada.herokuapp.com',
     'amadousy.pythonanywhere.com',
+    'www.dev-up.tech',
 ]
 
 

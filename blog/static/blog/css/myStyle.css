@@ -5,11 +5,12 @@ body  imgt{
 
 body nav {
     margin-top:-35px;
-    background-color:#0cb;
+
     /*height: 50%;*/
 }
 body{
 margin:15px;
+background-color:#f2f2f2;
 }
 nav form.visible {
     display: none;
