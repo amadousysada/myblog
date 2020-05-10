@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import os
 import sys
+from myblog.settings.profiles import PROFILE
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myblog.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myblog.settings."+PROFILE)
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

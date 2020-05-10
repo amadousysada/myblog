@@ -16,11 +16,17 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf.urls.static import static
-from myblog import settings
+
+from myblog.settings import prod, dev
+from myblog.settings.profiles import PROFILE
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
-]+ static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
+]
+if PROFILE == 'dev':
+    urlpatterns + static(dev.MEDIA_URL,  document_root=dev.MEDIA_ROOT)
+else:
+    urlpatterns + static(prod.MEDIA_URL, document_root=prod.MEDIA_ROOT)
