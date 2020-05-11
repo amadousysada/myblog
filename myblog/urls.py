@@ -28,3 +28,5 @@ urlpatterns = [
 ]
 if PROFILE == 'dev':
     urlpatterns += static(dev.MEDIA_URL,  document_root=dev.MEDIA_ROOT)
+else:
+    urlpatterns += static(prod.MEDIA_URL, document_root=prod.MEDIA_ROOT)
