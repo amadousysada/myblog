@@ -1,0 +1,56 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "admin",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Amadou",
+        "last_name": "SY",
+        "email": "amsada93@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-05-11T02:43:43.221Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "123456789",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "amsada",
+        "first_name": "Alan",
+        "last_name": "GUTER",
+        "email": "a.guter@chiam.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-05-11T02:43:43.236Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$1atYmc3y3d8S$/m5p5m4BgPDtMv6lY/QIFDyYTRggPKww605WDo1JapY=",
+        "last_login": "2020-05-11T02:49:14.646Z",
+        "is_superuser": true,
+        "username": "amadsy",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-05-11T02:48:44.086Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
