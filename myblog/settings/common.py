@@ -98,5 +98,7 @@ STATIC_URL = '/static/'
 
 # STATIC_ROOT = BASE_DIR+"/var/www/amadou.com/static/"
 
-CKEDITOR_UPLOAD_PATH = 'upload'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+CKEDITOR_UPLOAD_PATH = '/media/upload/'
 
