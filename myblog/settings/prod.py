@@ -18,7 +18,7 @@ ALLOWED_HOSTS = [
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
 
-DEFAULT_FILE_STORAGE = 'ckeditor.backends.s3boto.S3BotoStorage_AllPublic'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_DEFAULT_ACL = 'public-read'
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
