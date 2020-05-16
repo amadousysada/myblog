@@ -5,8 +5,14 @@ from myblog.settings.common import *
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY','*g=cd&_vkcq*&a_*3git5qi-f(w^sr+egwat4if4ux3&z3^t5(')
 
+# Setting for redirecting all unsecure connections (http) to https
+# https://docs.djangoproject.com/en/2.2/topics/security/#ssl-https
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'myblog-amsada.herokuapp.com',

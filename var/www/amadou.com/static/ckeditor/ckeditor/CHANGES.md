@@ -591,7 +591,7 @@ Other Changes:
 
 **Security Updates:**
 
-* [Severity: minor] Fixed the `target="_blank"` vulnerability reported by James Gaskell.
+* [Severity: minor] Fixed the `target="_blank" rel="noopener"` vulnerability reported by James Gaskell.
 
 	Issue summary: If a victim had access to a spoofed version of ckeditor.com via HTTP (e.g. due to DNS spoofing, using a hacked public network or mailicious hotspot), then when using a link to the ckeditor.com website it was possible for the attacker to change the current URL of the opening page, even if the opening page was protected with SSL.
 
