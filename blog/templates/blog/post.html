@@ -1,54 +1,86 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
-<div class="col u-xs-size12of12 js-trackPostPresentation u-paddingLeft12 u-marginBottom15 u-paddingRight12 u-size6of12" data-source="collection_home---4------0-----------------------" data-post-id="96667b06af5" data-index="0" data-scroll="native">
-      <div class="u-lineHeightBase postItem">
-        <a href="https://towardsdatascience.com/questions-96667b06af5?source=collection_home---4------0-----------------------" data-action="open-post" data-action-value="https://towardsdatascience.com/questions-96667b06af5?source=collection_home---4------0-----------------------" class="u-block u-xs-height170 u-width600 u-height272  u-backgroundSizeCover u-backgroundOriginBorderBox u-backgroundColorGrayLight u-borderLighter" style="background-image: url(&quot;https://cdn-images-1.medium.com/max/600/1*qfA3TgrXngQ4-7bGwNH7Yw.jpeg&quot;); background-position: 50% 50% !important;">
-          <span class="u-textScreenReader">Write for Towards Data Science</span>
-        </a>
-      </div>
-      <div class="col u-xs-marginBottom10 u-paddingLeft0 u-paddingRight0 u-paddingTop15 u-marginBottom30">
-        <a class="" href="https://towardsdatascience.com/questions-96667b06af5?source=collection_home---4------0-----------------------" data-action-source="collection_home---4------0-----------------------" data-post-id="96667b06af5">
-          <h3 class="u-contentSansBold u-lineHeightTightest u-xs-fontSize24 u-paddingBottom2 u-paddingTop5 u-fontSize32">
-            <div class="u-letterSpacingTight u-lineHeightTighter u-breakWord u-textOverflowEllipsis u-lineClamp3 u-fontSize24">Write for Towards Data&nbsp;Science</div>
-          </h3>
-          <div class="u-contentSansThin u-lineHeightBaseSans u-fontSize24 u-xs-fontSize18 u-textColorNormal u-baseColor--textNormal">
-            <div class="u-fontSize18 u-letterSpacingTight u-lineHeightTight u-marginTop7 u-textColorNormal u-baseColor--textNormal">
-              We are looking for writers to propose up-to-date content, mainly focused on data science, machine learning, artificial intelligence, and…
-            </div>
-          </div>
-        </a>
-        <div class="u-clearfix u-marginTop20">
-          <div class="u-flexCenter">
-            <div class="postMetaInline-avatar u-flex0">
-              <a class="link u-baseColor--link avatar" href="https://towardsdatascience.com/@TDSteam" data-action="show-user-card" data-action-value="7e12c71dfa81" data-action-type="hover" data-user-id="7e12c71dfa81" data-collection-slug="towards-data-science" dir="auto">
-                <div class="u-relative u-inlineBlock u-flex0">
-                  <img src="https://cdn-images-1.medium.com/fit/c/36/36/1*VMPX-0DI9mA1DoGF3zvxqw.jpeg" class="avatar-image u-size36x36 u-xs-size32x32" alt="Go to the profile of TDS Team">
-                  <div class="avatar-halo u-absolute u-textColorGreenNormal svgIcon" style=" display:flex; flex-direction:row; align-items: center; justify-content: center; height:calc(100% + 25px); width:calc(100% + 25px); pointer-events: none; top:50%; left:50%; transform:translateY(-50%) translateX(-50%); ">
-                    <svg width="39" height="39" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg" style="width: calc(100% - 18px); height: calc(100% - 18px);">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 1C11.8339 1 5.168 5.74599 1.90845 12.7115L1 12.2885C4.40345 5.01551 11.3974 0 19.5 0C27.6026 0 34.5966 5.01551 38 12.2885L37.0915 12.7115C33.832 5.74599 27.1661 1 19.5 1ZM1.90845 26.2885C5.168 33.254 11.8339 38 19.5 38C27.1661 38 33.832 33.254 37.0915 26.2885L38 26.7115C34.5966 33.9845 27.6026 39 19.5 39C11.3974 39 4.40345 33.9845 1 26.7115L1.90845 26.2885Z">
-
-                      </path>
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="postMetaInline postMetaInline-authorLockup ui-captionStrong u-flex1 u-noWrapWithEllipsis">
-              <a class="ds-link ds-link--styleSubtle link link--darken link--accent u-accentColor--textNormal u-accentColor--textDarken" href="https://towardsdatascience.com/@TDSteam" data-action="show-user-card" data-action-value="7e12c71dfa81" data-action-type="hover" data-user-id="7e12c71dfa81" data-collection-slug="towards-data-science" dir="auto">
-                TDS Team
-              </a>
-              <div class="ui-caption u-fontSize12 u-baseColor--textNormal u-textColorNormal js-postMetaInlineSupplemental">
-                <time datetime="2016-10-22T03:43:10.250Z">Oct 22, 2016</time>
-                <span class="middotDivider u-fontSize12"></span>
-                <span class="readingTime" title="2 min read"></span>
-              </div>
-            </div>
-          </div>
+{% block topic %}
+    <div class="col mt-5">
+        <div class="d-flex justify-content-center">
+            <h5 style="text-decoration: underline;font-weight: bold; color:white, font-family: Arial, Helvetica, sans-serif; font-size:25px">{{post.topic}}</h5>
         </div>
-      </div>
     </div>
+{% endblock %}
+{% block profile %}
+    <div class="row mt-5" style="position:fixed;" >
+                {% include "blog/about.html" %}
+            </div>
+{% endblock %}
+{% block tags %}
+<div class="panel panel-success mt-5 ml-5 ml-5">
+    <div class="panel-heading">
+        <!--<h3 class="panel-title">TAGS</h3>-->
+    </div>
+  <div class="panel-body">
+    {% for tag in tags %}
+                    <!--<a href="#" style="text-decoration: underline;font-weight: bold; color:white, font-family: courier,arial,helvetica; font-size:20px; font-style: oblique;">{{tag.tag}}</a>-->
+                {% endfor %}
+  </div>
+
+
+</div>
+
+{% endblock %}
+{% block coverA %}
+    <div class="mt-5"><img alt="..." class="card-img" src="/media/{{post.cover}}"></div>
+{% endblock %}
+
+{% block coverB %}
+    <div class="mt-5"><img alt="..." class="card-img" src="/media/{{post.cover}}"></div>
+{% endblock %}
+{% block content %}
+
+<main role="main">
+    <div class="col mt-5">
+        <div class="mt-5">{{post.content|safe}}</div>
+    </div>
+</main>
+
 {% if messages %}
 
 {% endif %}
+{% endblock %}
+
+
+{% block comments %}
+<div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>
+        <hr>
+    </div>
+<div id="disqus_thread"></div>
+<script>
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function () {
+        this.page.url = "{{ request.build_absolute_uri }}";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "{{ request.get_full_path }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() {  // DON'T EDIT BELOW THIS LINE
+
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://geekknowledgeup.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+    powered by Disqus.</a></noscript>
 {% endblock %}

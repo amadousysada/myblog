@@ -24,6 +24,8 @@ ALLOWED_HOSTS = [
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
 
+CKEDITOR_UPLOAD_PATH = '/media/upload/'
+
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_DEFAULT_ACL = 'public-read'
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')

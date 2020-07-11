@@ -14,103 +14,134 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'blog/images/favicons/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'blog/images/favicons/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'blog/images/favicons/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'blog/images/favicons/site.webmanifest' %}">
-    <link rel="mask-icon" href="blog/images/favicons/safari-pinned-tab.svg' %}" color="#5bbad5">
-    <meta name="apple-mobile-web-app-title" content="Dev Up">
-    <meta name="application-name" content="Dev Up">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#f6eaf4">
+    <link href="{% static 'blog/images/favicons/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="180x180">
+    <link href="{% static 'blog/images/favicons/favicon-32x32.png' %}" rel="icon" sizes="32x32" type="image/png">
+    <link href="{% static 'blog/images/favicons/favicon-16x16.png' %}" rel="icon" sizes="16x16" type="image/png">
+    <link href="{% static 'blog/images/favicons/site.webmanifest' %}" rel="manifest">
+    <link color="#5bbad5" href="blog/images/favicons/safari-pinned-tab.svg' %}" rel="mask-icon">
+    <meta content="Dev Up" name="apple-mobile-web-app-title">
+    <meta content="Dev Up" name="application-name">
+    <meta content="#00aba9" name="msapplication-TileColor">
+    <meta content="#f6eaf4" name="theme-color">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet">
 
     <script src="{% static 'blog/js/navbar.js'%}"></script>
     {% block JheadScript %}{% endblock%}
     {% block stylesheet %}
-        <link href="{% static 'blog/css/myStyle.css'%}" rel="stylesheet" type="text/css">
-        <link href="{% static 'blog/css/about.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'blog/css/myStyle.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'blog/css/about.css'%}" rel="stylesheet" type="text/css">
     {% endblock %}
     <title>{% block title%}{{"dev up"|title}}{% endblock %}</title>
 </head>
 
 
-<body class="container">
+<nav class="container navbar navbar-expand-lg  navbar-light">
 
-        <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+    <a class="navbar-brand  d-none d-md-block d-xl-block" href="/">
+        <img height="100%" src="{% static 'blog/images/logo-D1.png' %}" width="100%">
+    </a>
+    <a class="navbar-brand  d-inline-block d-sm-block d-md-none" href="/">
+        <img height="30%" src="{% static 'blog/images/logo-E1.png' %}" width="30%">
+    </a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler ml-auto"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <a class="navbar-brand  d-none d-md-block d-xl-block" href="#">
-            <img src="{% static 'blog/images/logo-D1.png' %}" width="100%" height="100%">
-        </a>
-        <a class="navbar-brand  d-inline-block d-sm-block d-md-none" href="#">
-            <img src="{% static 'blog/images/logo-E1.png' %}" width="30%" height="30%">
-        </a>
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+            <!--<li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>-->
+            <!--
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://gf.dev/website-audit">test site performance <span class="sr-only">(current)</span></a>
+                            </li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="https://gf.dev/website-audit">test site performance <span class="sr-only">(current)</span></a>
-                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Categories
+                                </a>
+                                <div  class="dropdown-menu bg-dark " role="menu">
+                                    <ul class="list-inline" >
+                                        <li class="list-inline-item"><a  href="#">Programmation</a></li>
+                                        <li class="list-inline-item"><a  href="#">Data Science</a></li>
+                                        <li class="list-inline-item"><a  href="#">Design</a></li>
+                                        <li class="list-inline-item"><a  href="#">Machine Learning</a></li>
+                                    </ul>
+                                </div>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categories
-                    </a>
-                    <div  class="dropdown-menu bg-dark " role="menu">
-                        <ul class="list-inline" >
-                            <li class="list-inline-item"><a  href="#">Programmation</a></li>
-                            <li class="list-inline-item"><a  href="#">Data Science</a></li>
-                            <li class="list-inline-item"><a  href="#">Design</a></li>
-                            <li class="list-inline-item"><a  href="#">Machine Learning</a></li>
-                        </ul>
-                    </div>
-
-                </li>
-                <li>
-                    <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                    <form class="form-inline my-2 my-lg-0 visible">
-                        <div class="input-group mr-2">
-                            <input class="form-control" type="search"  placeholder="Search" aria-label="Search" id="inputSearch">
-                            <div class="input-group-append">
-                                <a href="#" class="visible nav-link"><span style="color:red;background-color: transparancy;border: 0; border-radius:0;position:absolute;margin-left:-25px;">&times;</span></a>
-                            </div>
-                        </div>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                                <form class="form-inline my-2 my-lg-0 visible">
+                                    <div class="input-group mr-2">
+                                        <input class="form-control" type="search"  placeholder="Search" aria-label="Search" id="inputSearch">
+                                        <div class="input-group-append">
+                                            <a href="#" class="visible nav-link"><span style="color:red;background-color: transparancy;border: 0; border-radius:0;position:absolute;margin-left:-25px;">&times;</span></a>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                            </li>
+                           -->
+        </ul>
+    </div>
+</nav>
+<body class="container-fluid">
     <div class="row">
-        <div class="col">
-            {% block content %}{% endblock %}
+        {% block topic %}{% endblock %}
+    </div>
+    <div class="row">
+        <div class="col-3 d-none d-md-block d-xl-block">
+            {% block profile %}{% endblock %}
+        </div>
+        <div class="col-6 d-none d-md-block d-xl-block">
+            {% block coverA %}{% endblock %}
+        </div>
+        <div class="col-3 d-none d-md-block d-xl-block">
+            {% block tags %}{% endblock %}
+        </div>
+        <div class="col d-inline-block d-sm-block d-md-none">
+            {% block coverB %}{% endblock %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% block content %}{% endblock %}
+
+                 {% block comments %}{% endblock %}
+            </div>
         </div>
     </div>
 
+
 </body>
 <footer class="footer container-fluid bg-customize">
-
-        <div class="row">
-            {% include "blog/about.html" %}
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>
+        <hr>
+    </div>
+    <div class="row d-sm-block d-md-none">
+        {% include "blog/about.html" %}
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <h6>© 2018</h6>
         </div>
-        <div class="row">
-            <div class="col text-center">
-                <h6 >© 2018</h6>
-            </div>
-            
-        </div>
+    </div>
 </footer>
 
 </html>

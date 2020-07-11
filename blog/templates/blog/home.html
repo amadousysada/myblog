@@ -3,21 +3,38 @@
 {% block content %}
 
 <main role="main">
-  <!--<div class="alert alert-primary sticky-top" role="alert">
-  A simple primary alert—check it out! -->
-  <div class="list-group">
-    {% for post in posts %}
-      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start mt-5">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">{{post.topic}}</h5>
-          <small>small1</small>
-
+    <!--<div class="alert alert-primary sticky-top" role="alert">
+    A simple primary alert—check it out! -->
+    <div class="list-group">
+        {% for post in posts %}
+      <a href="/articles/{{post.published_year}}/{{post.published_month}}/{{post.topic}}/" class="list-group-item list-group-item-action flex-column align-items-start mt-5">
+        <div class="card border-0">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <!--<img src="{% static 'blog/images/profile.jpg' %}" class="card-img" alt="..." height="160">-->
+                    <img alt="..." class="card-img" src="/media/{{post.cover}}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.topic}}</h5>
+                        <p class="card-text">{{post.content|safe|truncatewords:20}}</p>
+                        <p class="card-text"><small class="text-muted">Last updated {{post.pub_date}}</small></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="mb-1">Paragraph1</p>
-        <small>{{post.content|safe}}</small>
       </a>
-    {% endfor %}
-  </div>
+        <!--<a href="#" class="list-group-item list-group-item-action flex-column align-items-start mt-5">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{post.topic}}</h5>
+            <small>small1</small>
+
+          </div>
+          <p class="mb-1">Paragraph1</p>
+          <small>{{post.content|safe}}</small>
+        </a>-->
+        {% endfor %}
+    </div>
 </main>
 
 {% if messages %}
