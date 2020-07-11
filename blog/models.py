@@ -9,7 +9,7 @@ class Post(models.Model):
     topic = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now_add=True)
-    cover = models.ImageField(upload_to='upload/%Y/%m/%d/')
+    cover = models.ImageField(upload_to='media/upload/%Y/%m/%d/')
     published = models.BooleanField(default=False)
     content = RichTextUploadingField()
 
@@ -28,4 +28,4 @@ class Post(models.Model):
 
 class PostTag(models.Model):
     tag = models.TextField()
-    posts = models.ForeignKey(Post, null= True, on_delete=models.SET_NULL)
+    posts = models.ForeignKey(Post, null=True, on_delete=models.SET_NULL)
