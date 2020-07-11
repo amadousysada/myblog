@@ -26,6 +26,8 @@ DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=Tru
 
 CKEDITOR_UPLOAD_PATH = '/media/upload/'
 
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_DEFAULT_ACL = 'public-read'
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
