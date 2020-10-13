@@ -28,11 +28,16 @@
 
 {% endblock %}
 {% block coverA %}
-    <div class="mt-5"><img alt="..." class="card-img" src="{{post.cover.url}}"></div>
+    {% if post.cover %}
+        <div class="mt-5"><img alt="..." class="card-img" src="{{post.cover.url}}"></div>
+    {% endif %}
+
 {% endblock %}
 
 {% block coverB %}
-    <div class="mt-5"><img alt="..." class="card-img" src="{{post.cover.url}}"></div>
+    {% if post.cover %}
+        <div class="mt-5"><img alt="..." class="card-img" src="{{post.cover.url}}"></div>
+    {% endif %}
 {% endblock %}
 {% block content %}
 

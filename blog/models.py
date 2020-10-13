@@ -9,7 +9,7 @@ class Post(models.Model):
     topic = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now_add=True)
-    cover = models.ImageField(upload_to='media/upload/%Y/%m/%d/')
+    cover = models.ImageField(upload_to='media/upload/%Y/%m/%d/', blank=True, null=True)
     published = models.BooleanField(default=False)
     content = RichTextUploadingField()
 

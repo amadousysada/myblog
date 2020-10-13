@@ -1,1 +1,3 @@
-PROFILE = "prod"
+import os
+
+PROFILE = os.getenv("PROFILE", "dev")

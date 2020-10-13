@@ -10,10 +10,11 @@
       <a href="/articles/{{post.published_year}}/{{post.published_month}}/{{post.topic}}/" class="list-group-item list-group-item-action flex-column align-items-start mt-5">
         <div class="card border-0">
             <div class="row no-gutters">
+                {% if post.cover %}
                 <div class="col-md-4">
-                    <!--<img src="{% static 'blog/images/profile.jpg' %}" class="card-img" alt="..." height="160">-->
                     <img alt="..." class="card-img" src="{{post.cover.url}}">
                 </div>
+                {% endif %}
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{post.topic}}</h5>
