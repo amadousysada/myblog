@@ -77,6 +77,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 500,
+        'width': 1500,
+    },
+}
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
