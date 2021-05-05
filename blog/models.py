@@ -12,6 +12,7 @@ class Post(models.Model):
     cover = models.ImageField(upload_to='media/upload/%Y/%m/%d/', blank=True, null=True)
     published = models.BooleanField(default=False)
     content = RichTextUploadingField()
+    resume = RichTextUploadingField()
 
     def __str__(self):
         return self.topic
