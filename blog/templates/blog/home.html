@@ -1,43 +1,39 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
 <main role="main">
-    <!--<div class="alert alert-primary sticky-top" role="alert">
-    A simple primary alert—check it out! -->
-    <div class="list-group">
-        {% for post in posts %}
-      <a href="/articles/{{post.published_year}}/{{post.published_month}}/{{post.topic}}/" class="list-group-item list-group-item-action flex-column align-items-start mt-5">
-        <div class="card border-0">
-            <div class="row no-gutters">
-
+    {% for post in posts %}
+        <div>
+            <div class="row">
                 <div class="col-md-8">
-                    <div class="card-body">
-                        <h1 class="card-title">{{post.topic}}</h1>
-                        <p class="card-text">{{post.content|safe|truncatewords:20}}</p>
+                    <div>
+                        {% if not forloop.first %}
+                            <hr/>
+                        {% endif %}
                         <p class="card-text"><small class="text-muted">Last updated {{post.pub_date}}</small></p>
+                        <h3><strong>{{post.topic}}</strong></h3>
+                        <p class="card-text">{{post.content|safe|truncatewords:100}}</p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <a href="{% url 'post' year=post.published_year month=post.published_month topic=post.topic %}">
+                                    Read more
+                                </a>
+                            </small>
+                        </p>
                     </div>
                 </div>
                 {% if post.cover %}
-                <div class="col-md-4 d-flex justify-content-center">
-                    <img alt="..." class="card-img" src="{{post.cover.url}}">
+                <div class="bg-dark col-md-4 d-flex justify-content-center">
+                    <a class="d-flex justify-content-center" href="{% url 'post' year=post.published_year month=post.published_month topic=post.topic %}">
+                        <img alt="..." class="card-img" src="{{post.cover.url}}">
+                    </a>
                 </div>
                 {% endif %}
 
             </div>
         </div>
-      </a>
-        <!--<a href="#" class="list-group-item list-group-item-action flex-column align-items-start mt-5">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{post.topic}}</h5>
-            <small>small1</small>
-
-          </div>
-          <p class="mb-1">Paragraph1</p>
-          <small>{{post.content|safe}}</small>
-        </a>-->
-        {% endfor %}
-    </div>
+     <!-- </a>-->
+    {% endfor %}
 </main>
 
 {% if messages %}

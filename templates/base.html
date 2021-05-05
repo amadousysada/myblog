@@ -52,90 +52,49 @@
             data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav ml-auto">
-            <!--<li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>-->
-            <!--
-                            <li class="nav-item active">
-                                <a class="nav-link" href="https://gf.dev/website-audit">test site performance <span class="sr-only">(current)</span></a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Categories
-                                </a>
-                                <div  class="dropdown-menu bg-dark " role="menu">
-                                    <ul class="list-inline" >
-                                        <li class="list-inline-item"><a  href="#">Programmation</a></li>
-                                        <li class="list-inline-item"><a  href="#">Data Science</a></li>
-                                        <li class="list-inline-item"><a  href="#">Design</a></li>
-                                        <li class="list-inline-item"><a  href="#">Machine Learning</a></li>
-                                    </ul>
-                                </div>
-
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                                <form class="form-inline my-2 my-lg-0 visible">
-                                    <div class="input-group mr-2">
-                                        <input class="form-control" type="search"  placeholder="Search" aria-label="Search" id="inputSearch">
-                                        <div class="input-group-append">
-                                            <a href="#" class="visible nav-link"><span style="color:red;background-color: transparancy;border: 0; border-radius:0;position:absolute;margin-left:-25px;">&times;</span></a>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                </form>
-                            </li>
-                           -->
-        </ul>
-    </div>
 </nav>
 <body class="container-fluid">
-    <div class="row">
-        {% block topic %}{% endblock %}
+    <div class="mt-0 pt-0">
+        <hr/>
     </div>
     <div class="row">
-        <div class="col-3 d-none d-md-block d-xl-block">
+        <div class="col-2 d-none d-xl-block">
             {% block profile %}
-            <div class="row mt-5" style="position:fixed;" >
-                {% include "blog/about.html" %}
-            </div>
+                <div class="row mt-5" style="position:fixed;" >
+                    {% include "blog/about.html" %}
+                </div>
             {% endblock %}
-        </div>
-        <div class="col-6 d-none d-md-block d-xl-block">
-            {% block coverA %}{% endblock %}
-        </div>
-        <div class="col-3 d-none d-md-block d-xl-block">
-            {% block tags %}{% endblock %}
-        </div>
-        <div class="col d-inline-block d-sm-block d-md-none">
-            {% block coverB %}{% endblock %}
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {% block content %}{% endblock %}
 
-                 {% block comments %}{% endblock %}
+            <div class="col-6 d-none d-md-block d-xl-block">
+                {% block coverA %}{% endblock %}
+            </div>
+
+            <div class="col-3 d-none d-md-block d-xl-block">
+                {% block tags %}{% endblock %}
+            </div>
+
+            <div class="col d-inline-block d-sm-block d-md-none">
+                {% block coverB %}{% endblock %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        {% block content %}{% endblock %}
+                        {% block comments %}{% endblock %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
 </body>
 <footer class="container-fluid page-footer font-small blue mt-5 pt-5">
 
     <div class="mt-5 pt-5">
         <hr>
     </div>
-    <div class="row d-sm-block d-md-none">
+    <div class="row d-xl-none d-sm-block d-md-block">
         {% include "blog/about.html" %}
     </div>
     <div class="row">

@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block topic %}
-    <div class="col mt-5">
-        <div class="d-flex justify-content-center">
-            <h5 style="text-decoration: underline;font-weight: bold; color:white, font-family: Arial, Helvetica, sans-serif; font-size:25px">{{post.topic}}</h5>
-        </div>
-    </div>
-{% endblock %}
+
 {% block profile %}
     <div class="row mt-5" style="position:fixed;" >
                 {% include "blog/about.html" %}
@@ -43,6 +37,7 @@
 
 <main role="main">
     <div class="col mt-5">
+        <h3 style="text-decoration: underline; font-family: Times New Roman, Times, serif;font-size:35px"><strong>{{post.topic}}</strong></h3>
         <div class="mt-5">{{post.content|safe}}</div>
     </div>
 </main>
